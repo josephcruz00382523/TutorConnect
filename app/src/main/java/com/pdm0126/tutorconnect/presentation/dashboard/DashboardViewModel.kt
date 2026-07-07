@@ -3,7 +3,8 @@ package com.pdm0126.tutorconnectproyect.presentation.dashboard
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pdm0126.tutorconnect.data.model.FeaturedPost
-import com.pdm0126.tutorconnectproyect.data.repository.PostRepository
+import com.pdm0126.tutorconnect.data.repository.AuthRepository
+import com.pdm0126.tutorconnect.data.repository.PostRepository
 import com.pdm0126.tutorconnectproyect.domain.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
@@ -17,7 +18,7 @@ import javax.inject.Inject
 @HiltViewModel
 class DashboardViewModel @Inject constructor(
     private val postRepository: PostRepository,
-    private val authRepository: com.pdm0126.tutorconnectproyect.data.repository.AuthRepository
+    private val authRepository: AuthRepository
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(DashboardUiState())

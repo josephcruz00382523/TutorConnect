@@ -3,9 +3,9 @@ package com.pdm0126.tutorconnectproyect.presentation.post
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pdm0126.tutorconnect.data.model.Post
-import com.pdm0126.tutorconnectproyect.data.repository.AuthRepository
-import com.pdm0126.tutorconnectproyect.data.repository.FileUploader
-import com.pdm0126.tutorconnectproyect.data.repository.PostRepository
+import com.pdm0126.tutorconnect.data.repository.AuthRepository
+import com.pdm0126.tutorconnect.data.repository.FileUploader
+import com.pdm0126.tutorconnect.data.repository.PostRepository
 import com.pdm0126.tutorconnectproyect.domain.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel

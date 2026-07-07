@@ -1,10 +1,10 @@
-package com.pdm0126.tutorconnectproyect.data.repository
+package com.pdm0126.tutorconnect.data.repository
 
-import com.pdm0126.tutorconnectproyect.data.model.Booking
-import com.pdm0126.tutorconnectproyect.data.model.ChatMessage
-import com.pdm0126.tutorconnectproyect.data.model.Post
-import com.pdm0126.tutorconnectproyect.data.model.User
-import com.pdm0126.tutorconnectproyect.domain.Resource
+import com.pdm0126.tutorconnect.data.model.Booking
+import com.pdm0126.tutorconnect.data.model.ChatMessage
+import com.pdm0126.tutorconnect.data.model.Post
+import com.pdm0126.tutorconnect.data.model.User
+import com.pdm0126.tutorconnect.domain.Resource
 import kotlinx.coroutines.flow.Flow
 
 interface AuthRepository {
@@ -20,10 +20,10 @@ interface TutorRepository {
 }
 
 interface PostRepository {
-    fun getAllPosts(): kotlinx.coroutines.flow.Flow<Resource<List<Post>>>
+    fun getAllPosts(): Flow<Resource<List<Post>>>
     suspend fun createPost(post: Post): Resource<Unit>
     suspend fun addComment(comment: com.pdm0126.tutorconnectproyect.data.model.Comment): Resource<Unit>
-    fun getComments(postId: String): kotlinx.coroutines.flow.Flow<Resource<List<com.pdm0126.tutorconnectproyect.data.model.Comment>>>
+    fun getComments(postId: String): Flow<Resource<List<com.pdm0126.tutorconnectproyect.data.model.Comment>>>
 }
 
 interface BookingRepository {
@@ -39,7 +39,7 @@ interface ChatRepository {
     // necesita emitir datos en tiempo real cada vez que llega un mensaje nuevo.
     fun getMessages(userId1: String, userId2: String): Flow<Resource<List<ChatMessage>>>
 
-    fun getGroupChatsForUser(userId: String): kotlinx.coroutines.flow.Flow<Resource<List<com.pdm0126.tutorconnectproyect.data.model.GroupChat>>>
+    fun getGroupChatsForUser(userId: String): Flow<Resource<List<com.pdm0126.tutorconnectproyect.data.model.GroupChat>>>
     suspend fun sendGroupMessage(message: com.pdm0126.tutorconnectproyect.data.model.GroupMessage): Resource<Unit>
-    fun getGroupMessages(groupChatId: String): kotlinx.coroutines.flow.Flow<Resource<List<com.pdm0126.tutorconnectproyect.data.model.GroupMessage>>>
+    fun getGroupMessages(groupChatId: String): Flow<Resource<List<com.pdm0126.tutorconnectproyect.data.model.GroupMessage>>>
 }

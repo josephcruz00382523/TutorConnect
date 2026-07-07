@@ -1,10 +1,10 @@
-package com.pdm0126.tutorconnectproyect.data.repository
+package com.pdm0126.tutorconnect.data.repository
 
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
-import com.pdm0126.tutorconnectproyect.data.model.Comment
-import com.pdm0126.tutorconnectproyect.data.model.Post
-import com.pdm0126.tutorconnectproyect.domain.Resource
+import com.pdm0126.tutorconnect.data.model.Comment
+import com.pdm0126.tutorconnect.data.model.Post
+import com.pdm0126.tutorconnect.domain.Resource
 import kotlinx.coroutines.channels.awaitClose
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.callbackFlow

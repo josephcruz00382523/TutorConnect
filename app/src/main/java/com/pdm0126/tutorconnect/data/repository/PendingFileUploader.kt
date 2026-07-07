@@ -1,7 +1,7 @@
-package com.pdm0126.tutorconnectproyect.data.repository
+package com.pdm0126.tutorconnect.data.repository
 
 import android.net.Uri
-import com.pdm0126.tutorconnectproyect.domain.Resource
+import com.pdm0126.tutorconnect.domain.Resource
 import javax.inject.Inject
 
 class PendingFileUploader @Inject constructor() : FileUploader {

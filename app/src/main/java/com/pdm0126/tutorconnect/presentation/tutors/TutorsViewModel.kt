@@ -3,7 +3,7 @@ package com.pdm0126.tutorconnectproyect.presentation.tutors
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pdm0126.tutorconnect.data.model.Tutor
-import com.pdm0126.tutorconnectproyect.data.repository.TutorRepository
+import com.pdm0126.tutorconnect.data.repository.TutorRepository
 import com.pdm0126.tutorconnectproyect.domain.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
