@@ -1,6 +1,6 @@
 package com.pdm0126.tutorconnectproyect.presentation.chat
 
-import com.pdm0126.tutorconnectproyect.data.model.ChatMessage
+import com.pdm0126.tutorconnect.data.model.ChatMessage
 
 data class ChatUiState(
     val messages: List<ChatMessage> = emptyList(),

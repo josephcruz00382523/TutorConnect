@@ -1,6 +1,6 @@
 package com.pdm0126.tutorconnectproyect.presentation.calendar
 
-import com.pdm0126.tutorconnectproyect.data.model.TutoringSession
+import com.pdm0126.tutorconnect.data.model.TutoringSession
 
 data class CalendarUiState(
     val sessions: List<TutoringSession> = emptyList(),

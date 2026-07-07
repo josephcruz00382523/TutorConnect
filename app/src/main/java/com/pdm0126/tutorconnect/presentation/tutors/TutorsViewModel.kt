@@ -2,6 +2,7 @@ package com.pdm0126.tutorconnectproyect.presentation.tutors
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.pdm0126.tutorconnect.data.model.Tutor
 import com.pdm0126.tutorconnectproyect.data.repository.TutorRepository
 import com.pdm0126.tutorconnectproyect.domain.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -36,7 +37,7 @@ class TutorsViewModel @Inject constructor(
                 is Resource.Success -> {
                     // Convertimos el User de Firebase al Tutor visual
                     val mappedTutors = result.data.map { user ->
-                        com.pdm0126.tutorconnectproyect.data.model.Tutor(
+                        Tutor(
                             id = user.id,
                             name = user.name,
                             subjects = user.subjects,

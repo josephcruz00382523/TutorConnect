@@ -2,7 +2,7 @@ package com.pdm0126.tutorconnectproyect.presentation.chat
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.pdm0126.tutorconnectproyect.data.model.ChatMessage
+import com.pdm0126.tutorconnect.data.model.ChatMessage
 import com.pdm0126.tutorconnectproyect.data.repository.AuthRepository
 import com.pdm0126.tutorconnectproyect.data.repository.ChatRepository
 import com.pdm0126.tutorconnectproyect.domain.Resource
