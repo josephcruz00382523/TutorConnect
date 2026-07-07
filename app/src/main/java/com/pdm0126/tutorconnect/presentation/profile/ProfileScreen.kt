@@ -38,7 +38,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.pdm0126.tutorconnectproyect.core.components.Avatar
 import com.pdm0126.tutorconnectproyect.core.components.ErrorState
 import com.pdm0126.tutorconnectproyect.core.components.LoadingState
-import com.pdm0126.tutorconnectproyect.data.model.UserProfile
+import com.pdm0126.tutorconnect.data.model.UserProfile
 import kotlinx.coroutines.flow.collectLatest
 
 @OptIn(ExperimentalMaterial3Api::class)

@@ -1,6 +1,6 @@
 package com.pdm0126.tutorconnectproyect.presentation.profile
 
-import com.pdm0126.tutorconnectproyect.data.model.UserProfile
+import com.pdm0126.tutorconnect.data.model.UserProfile
 
 data class ProfileUiState(
     val user: UserProfile? = null,

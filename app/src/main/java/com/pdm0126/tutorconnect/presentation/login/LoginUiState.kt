@@ -1,6 +1,6 @@
 package com.pdm0126.tutorconnectproyect.presentation.login
 
-import com.pdm0126.tutorconnectproyect.data.model.UserRole
+import com.pdm0126.tutorconnect.data.model.UserRole
 
 
 data class LoginUiState(

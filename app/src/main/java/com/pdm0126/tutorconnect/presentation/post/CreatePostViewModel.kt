@@ -2,7 +2,7 @@ package com.pdm0126.tutorconnectproyect.presentation.post
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.pdm0126.tutorconnectproyect.data.model.Post
+import com.pdm0126.tutorconnect.data.model.Post
 import com.pdm0126.tutorconnectproyect.data.repository.AuthRepository
 import com.pdm0126.tutorconnectproyect.data.repository.FileUploader
 import com.pdm0126.tutorconnectproyect.data.repository.PostRepository

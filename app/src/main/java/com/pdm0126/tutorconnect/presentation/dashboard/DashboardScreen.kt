@@ -65,7 +65,7 @@ import com.pdm0126.tutorconnectproyect.core.navigation.AppDestinations
 import com.pdm0126.tutorconnectproyect.core.theme.UcaAccent
 import com.pdm0126.tutorconnectproyect.core.theme.UcaNavy
 import com.pdm0126.tutorconnectproyect.core.theme.UcaNavyDark
-import com.pdm0126.tutorconnectproyect.data.model.FeaturedPost
+import com.pdm0126.tutorconnect.data.model.FeaturedPost
 import kotlinx.coroutines.flow.collectLatest
 
 @OptIn(ExperimentalMaterial3Api::class)

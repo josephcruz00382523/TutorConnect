@@ -2,6 +2,7 @@ package com.pdm0126.tutorconnectproyect.presentation.dashboard
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.pdm0126.tutorconnect.data.model.FeaturedPost
 import com.pdm0126.tutorconnectproyect.data.repository.PostRepository
 import com.pdm0126.tutorconnectproyect.domain.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -67,7 +68,7 @@ class DashboardViewModel @Inject constructor(
                     is Resource.Loading -> _uiState.update { it.copy(isLoading = true, error = null) }
                     is Resource.Success -> {
                         val mapeado = result.data.map {
-                            com.pdm0126.tutorconnectproyect.data.model.FeaturedPost(
+                            FeaturedPost(
                                 id = it.id, authorName = it.authorName, question = it.title
                             )
                         }

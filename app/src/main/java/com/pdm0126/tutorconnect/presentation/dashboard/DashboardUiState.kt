@@ -1,7 +1,7 @@
 package com.pdm0126.tutorconnectproyect.presentation.dashboard
 
-import com.pdm0126.tutorconnectproyect.data.model.FeaturedPost
-import com.pdm0126.tutorconnectproyect.data.model.UiChatMessage
+import com.pdm0126.tutorconnect.data.model.FeaturedPost
+import com.pdm0126.tutorconnect.data.model.UiChatMessage
 
 data class Subject(
     val id: String = "",

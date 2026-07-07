@@ -41,7 +41,7 @@ import com.pdm0126.tutorconnectproyect.core.components.ErrorState
 import com.pdm0126.tutorconnectproyect.core.components.LoadingState
 import com.pdm0126.tutorconnectproyect.core.components.StatusChip
 import com.pdm0126.tutorconnectproyect.core.navigation.AppDestinations
-import com.pdm0126.tutorconnectproyect.data.model.Tutor
+import com.pdm0126.tutorconnect.data.model.Tutor
 import kotlinx.coroutines.flow.collectLatest
 
 @OptIn(ExperimentalMaterial3Api::class)

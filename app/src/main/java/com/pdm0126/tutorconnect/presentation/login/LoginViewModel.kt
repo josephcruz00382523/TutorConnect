@@ -3,7 +3,7 @@ package com.pdm0126.tutorconnectproyect.presentation.login
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pdm0126.tutorconnectproyect.core.utils.Validators
-import com.pdm0126.tutorconnectproyect.data.model.UserRole
+import com.pdm0126.tutorconnect.data.model.UserRole
 import com.pdm0126.tutorconnectproyect.data.repository.AuthRepository
 import com.pdm0126.tutorconnectproyect.domain.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel

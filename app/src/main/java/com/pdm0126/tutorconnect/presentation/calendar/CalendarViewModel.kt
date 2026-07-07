@@ -2,7 +2,7 @@ package com.pdm0126.tutorconnectproyect.presentation.calendar
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.pdm0126.tutorconnectproyect.data.model.TutoringSession
+import com.pdm0126.tutorconnect.data.model.TutoringSession
 import com.pdm0126.tutorconnectproyect.data.repository.AuthRepository
 import com.pdm0126.tutorconnectproyect.data.repository.BookingRepository
 import com.pdm0126.tutorconnectproyect.domain.Resource

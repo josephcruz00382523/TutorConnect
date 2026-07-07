@@ -61,7 +61,7 @@ import com.pdm0126.tutorconnectproyect.core.components.PrimaryButton
 import com.pdm0126.tutorconnectproyect.core.theme.UcaAccent
 import com.pdm0126.tutorconnectproyect.core.theme.UcaNavy
 import com.pdm0126.tutorconnectproyect.core.theme.UcaNavyDark
-import com.pdm0126.tutorconnectproyect.data.model.UserRole
+import com.pdm0126.tutorconnect.data.model.UserRole
 import kotlinx.coroutines.flow.collectLatest
 
 @Composable

@@ -2,6 +2,7 @@ package com.pdm0126.tutorconnectproyect.presentation.tutor_detail
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.pdm0126.tutorconnect.data.model.Tutor
 import com.pdm0126.tutorconnectproyect.data.repository.TutorRepository
 import com.pdm0126.tutorconnectproyect.domain.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -52,7 +53,7 @@ class TutorDetailViewModel @Inject constructor(
             when (val result = tutorRepository.getTutorById(tutorId)) {
                 is Resource.Success -> {
                     val user = result.data
-                    val mappedTutor = com.pdm0126.tutorconnectproyect.data.model.Tutor(
+                    val mappedTutor = Tutor(
                         id = user.id,
                         name = user.name,
                         subjects = user.subjects,
