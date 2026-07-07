@@ -3,8 +3,8 @@ package com.pdm0126.tutorconnectproyect.presentation.postdetail
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pdm0126.tutorconnect.data.model.Comment
-import com.pdm0126.tutorconnectproyect.data.repository.AuthRepository
-import com.pdm0126.tutorconnectproyect.data.repository.PostRepository
+import com.pdm0126.tutorconnect.data.repository.AuthRepository
+import com.pdm0126.tutorconnect.data.repository.PostRepository
 import com.pdm0126.tutorconnectproyect.domain.Resource
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow

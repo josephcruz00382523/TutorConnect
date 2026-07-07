@@ -4,7 +4,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.pdm0126.tutorconnect.data.model.UserProfile
 import com.pdm0126.tutorconnect.data.model.UserRole
-import com.pdm0126.tutorconnectproyect.data.repository.AuthRepository
+import com.pdm0126.tutorconnect.data.repository.AuthRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableStateFlow

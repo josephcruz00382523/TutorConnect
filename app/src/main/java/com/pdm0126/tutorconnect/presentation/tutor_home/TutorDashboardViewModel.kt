@@ -2,7 +2,7 @@ package com.pdm0126.tutorconnectproyect.presentation.tutor_home
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.pdm0126.tutorconnectproyect.data.repository.AuthRepository
+import com.pdm0126.tutorconnect.data.repository.AuthRepository
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.SharingStarted
