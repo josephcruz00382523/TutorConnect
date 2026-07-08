@@ -1,5 +1,9 @@
 package com.pdm0126.tutorconnectproyect.core.navigation
 
+import androidx.compose.animation.core.tween
+import androidx.compose.animation.slideInHorizontally
+import androidx.compose.animation.slideOutHorizontally
+import androidx.compose.animation.togetherWith
 import androidx.compose.runtime.Composable
 import androidx.navigation3.runtime.NavBackStack
 import androidx.navigation3.runtime.NavKey
@@ -14,6 +18,34 @@ fun AppNavigation() {
 
     NavDisplay(
         backStack = backStack,
-        entryProvider = appEntryProvider(navigator)
+        onBack = { backStack.removeLastOrNull() },
+        entryProvider = appEntryProvider(navigator),
+        transitionSpec = {
+            slideInHorizontally(
+                initialOffsetX = { it },
+                animationSpec = tween(500)
+            ) togetherWith slideOutHorizontally(
+                targetOffsetX = { -it },
+                animationSpec = tween(500)
+            )
+        },
+        popTransitionSpec = {
+            slideInHorizontally(
+                initialOffsetX = { -it },
+                animationSpec = tween(500)
+            ) togetherWith slideOutHorizontally(
+                targetOffsetX = { it },
+                animationSpec = tween(500)
+            )
+        },
+        predictivePopTransitionSpec = {
+            slideInHorizontally(
+                initialOffsetX = { -it },
+                animationSpec = tween(250)
+            ) togetherWith slideOutHorizontally(
+                targetOffsetX = { it },
+                animationSpec = tween(250)
+            )
+        }
     )
 }
