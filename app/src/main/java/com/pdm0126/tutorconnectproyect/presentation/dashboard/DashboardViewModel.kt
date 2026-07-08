@@ -70,7 +70,12 @@ class DashboardViewModel @Inject constructor(
                     is Resource.Success -> {
                         val mapeado = result.data.map {
                             FeaturedPost(
-                                id = it.id, authorName = it.authorName, question = it.title
+                                id = it.id,
+                                authorName = it.authorName,
+                                question = it.title,
+                                content = it.content,
+                                fileUrl = it.fileUrl,
+                                fileType = it.fileType,
                             )
                         }
                         _uiState.update { it.copy(isLoading = false, featuredPosts = mapeado) }

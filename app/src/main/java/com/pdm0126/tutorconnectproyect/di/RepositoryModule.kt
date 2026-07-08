@@ -42,5 +42,5 @@ abstract class RepositoryModule {
     ): ChatRepository
 
     @Binds
-    abstract fun bindFileUploader(impl: PendingFileUploader): FileUploader
+    abstract fun bindFileUploader(impl: FirebaseFileUploader): FileUploader
 }

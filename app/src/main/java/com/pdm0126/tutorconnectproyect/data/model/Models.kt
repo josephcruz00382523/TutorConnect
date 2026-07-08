@@ -17,6 +17,9 @@ data class FeaturedPost(
     val authorName: String = "",
     val handle: String = "@uca.edu.sv",
     val question: String = "",
+    val content: String = "",
+    val fileUrl: String = "",
+    val fileType: String = "",
     val photoUrl: String? = null,
 )
 

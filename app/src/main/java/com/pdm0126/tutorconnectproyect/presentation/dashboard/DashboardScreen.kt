@@ -23,6 +23,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.Logout
 import androidx.compose.material.icons.automirrored.filled.Chat
+import androidx.compose.material.icons.filled.AttachFile
 import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.material.icons.filled.SwapHoriz
@@ -53,10 +54,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import coil.compose.AsyncImage
 import com.pdm0126.tutorconnectproyect.core.components.AppBottomBar
 import com.pdm0126.tutorconnectproyect.core.components.Avatar
 import com.pdm0126.tutorconnectproyect.core.components.ErrorState
@@ -369,6 +373,48 @@ private fun PostCard(post: FeaturedPost, onReply: () -> Unit) {
                         color = UcaAccent)
                 }
                 Text(post.question, style = MaterialTheme.typography.bodyMedium)
+
+                // Descripción
+                if (post.content.isNotBlank()) {
+                    Text(
+                        text = post.content,
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                        maxLines = 3,
+                        overflow = TextOverflow.Ellipsis
+                    )
+                }
+
+                // Imagen adjunta
+                if (post.fileUrl.isNotBlank() && post.fileType == "image") {
+                    AsyncImage(
+                        model = post.fileUrl,
+                        contentDescription = "Imagen adjunta",
+                        modifier = Modifier
+                            .fillMaxWidth()
+                            .height(180.dp)
+                            .clip(RoundedCornerShape(8.dp)),
+                        contentScale = ContentScale.Crop
+                    )
+                }
+
+                // PDF adjunto
+                if (post.fileUrl.isNotBlank() && post.fileType == "pdf") {
+                    Row(verticalAlignment = Alignment.CenterVertically) {
+                        Icon(
+                            Icons.Filled.AttachFile,
+                            contentDescription = null,
+                            tint = UcaAccent,
+                            modifier = Modifier.size(16.dp)
+                        )
+                        Text(
+                            " Archivo PDF adjunto",
+                            style = MaterialTheme.typography.labelSmall,
+                            color = UcaAccent
+                        )
+                    }
+                }
+
                 TextButton(
                     onClick = onReply,
                     modifier = Modifier.align(Alignment.End),
