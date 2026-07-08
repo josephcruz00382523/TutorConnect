@@ -54,6 +54,7 @@ dependencies {
     implementation(libs.androidx.compose.ui.graphics)
     implementation(libs.androidx.compose.ui.tooling.preview)
     implementation("androidx.compose.material:material-icons-extended:1.6.0")
+    implementation(libs.coil.compose)
 
     // Navigation 3 & Serialization
     implementation(libs.androidx.navigation3)
